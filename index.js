@@ -2,7 +2,12 @@
 // A title string is one which has all the words in the string start with a upper case letter.
 
 function checkTitle(title) {
-	
+    let answer = false
+    let titleArray = title.split(' ')
+    titleArray.forEach(word => {
+        word[0] === word[0].toUpperCase() ? answer = true : answer = false
+    })
+    return answer
 }
 
 console.log(checkTitle("A Mind Boggling Achievement"), true)
